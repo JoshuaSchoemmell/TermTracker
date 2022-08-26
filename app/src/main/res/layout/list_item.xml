@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <TextView
+        android:id="@+id/list_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/start_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@+id/list_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_title" />
+
+    <TextView
+        android:id="@+id/list_item_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toEndOf="@+id/start_date_title"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_title" />
+
+
+    <TextView
+        android:id="@+id/end_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toStartOf="@+id/list_item_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_title" />
+
+    <TextView
+        android:id="@+id/list_item_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/list_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_title" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

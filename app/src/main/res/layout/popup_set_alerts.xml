@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="32dp"
+    android:layout_width="wrap_content"
+    android:layout_marginHorizontal="32dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_border"
+    android:orientation="vertical">
+    <Button
+        android:background="@drawable/popup_border"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="end"
+        android:id="@+id/popup_done_button"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:paddingVertical="8dp"
+        android:text="@string/done"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/purple_500" />
+<ScrollView
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideInset"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+<LinearLayout
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="32dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    android:keyboardNavigationCluster="true"
+    android:orientation="vertical"
+    android:theme="@style/Theme.Term_Tracker"
+    tools:ignore="MissingDefaultResource">
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="@string/set_alerts"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+        android:textStyle="bold" />
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_date_alert_subtitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_weight="1"
+            android:text="@string/set_start_date_alert"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="normal" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:checked="false" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/start_date_alert_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/start_date_alert_day_of">
+
+        <RadioButton
+            android:enabled="false"
+            android:id="@+id/start_date_alert_day_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_day_before"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <RadioButton
+            android:enabled="false"
+            android:id="@+id/start_date_alert_day_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_day_of"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </RadioGroup>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date_alert_subtitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:gravity="fill_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_weight="1"
+            android:text="@string/set_end_date_alert"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_weight="1"
+            android:id="@+id/switch_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:checkedButton="@id/end_date_alert_day_of"
+        android:id="@+id/end_date_alert_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:enabled="false"
+            android:id="@+id/end_date_alert_day_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_day_before"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <RadioButton
+            android:enabled="false"
+            android:id="@+id/end_date_alert_day_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_day_of"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="?android:attr/listDivider" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_alert_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner" />
+
+
+
+</LinearLayout>
+</ScrollView></LinearLayout>
